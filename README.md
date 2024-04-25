@@ -11,6 +11,7 @@ This is a simple MVC template using Express.js, TypeScript, Jest, and two additi
 
 ## File Architecture
 
+```bash
 mvc-template/
 │
 ├── dist/ # Compiled TypeScript files
@@ -30,6 +31,7 @@ mvc-template/
 ├── package.json # Project details and dependencies
 ├── tsconfig.json # TypeScript configuration
 └── README.md # Project documentation
+```
 
 ## Installation
 
