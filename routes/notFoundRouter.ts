@@ -1,11 +1,13 @@
 import path from "path";
 import { Router } from "express";
 import { Request, Response } from "express-serve-static-core";
+import HttpStatus from "../Enums/httpStatus";
 
 const notFound = Router();
 
 notFound.all("*", (req: Request, res: Response) => {
-  res.status(404);
+  res.status(HttpStatus.NOT_FOUND);
+
   if (req.accepts("html")) {
     res.sendFile(path.join(__dirname, "../view/404.html"));
   } else if (req.accepts("json")) {
