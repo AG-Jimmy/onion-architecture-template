@@ -7,7 +7,11 @@
     "start": "npm run build && node dist/server.js",
     "dev": "nodemon --exec ts-node server.ts",
     "build": "tsc",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "docker-dev:up": "docker-compose -f docker-compose.dev.yml up",
+    "docker-dev:down": "docker-compose -f docker-compose.dev.yml down",
+    "docker-prod:up": "docker-compose -f docker-compose.prod.yml up",
+    "docker-prod:down": "docker-compose -f docker-compose.prod.yml down"
   },
   "author": "",
   "license": "ISC",
