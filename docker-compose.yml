@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  test-dev:
+    build: .
+    ports:
+      - "3000:3000"
+      - "3001:3000"
+    environment:
+      NODE_MODE: ${NODE_MODE}
+    env_file:
+      - ./.env
+
+    # container_name: ${NODE_MODE == "development" && "test-container-dev" || NODE_MODE == "production" && "test-container-production" || "test-container-default"}

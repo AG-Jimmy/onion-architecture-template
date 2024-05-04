@@ -1,0 +1,6 @@
+version: "3.8"
+services:
+  test-dev:
+    container_name: "test-container-dev"
+    volumes:
+      - .:/app
