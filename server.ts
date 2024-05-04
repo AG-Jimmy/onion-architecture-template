@@ -5,6 +5,7 @@ import routes from "./routes/combineRouters";
 import corsOptions from "./config/corsOrigins";
 import cookieParser from "cookie-parser";
 import "dotenv/config";
+// import bodyParser from "body-parser";
 
 const app = express(); // use express app
 const PORT = process.env.PORT ?? 3000; // default port to 3000
