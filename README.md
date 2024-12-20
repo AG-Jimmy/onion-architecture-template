@@ -1,10 +1,10 @@
-# MVC Template
+Onion architecture template
 
-This is a simple MVC template using Express.js, TypeScript, Jest, and two additional pages for handling 404 errors and API documentation.
+_This simple Onion architecture template uses **Node/Express** by **TypeScript**, With test tool **Jest** and two additional pages for handling 404 errors and API documentation._
 
 ## Features
 
-- MVC architecture
+- Onion architecture
 - Jest for testing
 - TypeScript for type safety
 - Two additional pages: Not Found Page and API Documentation Page
@@ -23,30 +23,44 @@ This is a simple MVC template using Express.js, TypeScript, Jest, and two additi
 </li>
 </ul>
 
-## File Architecture
+# Project Folder Structure
 
-```bash
-mvc-template/
-│
-├── dist/           # Compiled TypeScript files
-│
-│── controllers/    # Controller files
-│── routes/         # Route files
-│── config/         # config files
-│── views/          # View files
-│── models/         # View files
-│── public/         # style and assets files
-│── Enums/          # unchangeable variables
-|
-│── app.ts          # Express application
-│── server.ts       # Server setup
-├── .env            # Environment variables
-├── .gitignore      # Git ignore file
-├── package.json    # Project details and dependencies
-├── tsconfig.json   # TypeScript configuration
-└── README.md       # Project documentation
+This document provides an overview of the folder structure for the project designed using Onion Architecture. The architecture emphasizes separation of concerns and independence between layers.
+
+## Overview of Onion Architecture
+
+The Onion Architecture consists of multiple layers:
+1. **Domain Layer**: Contains the core business logic and rules.
+2. **Application Layer**: Manages use cases and DTOs, serving as the intermediary between the Domain and Infrastructure layers.
+3. **Infrastructure Layer**: Handles external interactions like databases, APIs, and frameworks.
+4. **Presentation Layer** (if applicable): Deals with user interfaces or API routes for external interaction.
+
+## Folder Structure
+
 ```
+|-- __tests__/
+|-- application/
+|   |-- dtos/
+|   |-- use-cases/
+|-- config/
+|   |-- corsOrigins.ts
+|   |-- serverConfig.ts
+|-- domain/
+|   |-- entities/
+|   |-- enums/
+|   |-- repositories/
+|   |-- services/
+|-- infrastructure/
+|   |-- controllers/
+|   |-- public/
+|   |-- repositories/
+|   |-- routes/
+|   |-- view/
+|   |-- server.ts
 
+```
+ذ
+ذذذ
 ## Dependencies
 
 <ul>
@@ -97,20 +111,20 @@ mvc-template/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/AG-Jimmy/mvc-template.git
+git clone https://github.com/AG-Jimmy/onion-architecture-template.git
 ```
 
 2. Install dependencies:
 
 ```bash
-cd mvc-template
+cd onion-architecture-template
 npm install
 ```
 
 3. Install dependencies:
 
 ```bash
-cd mvc-template
+cd onion-architecture-template
 npm install
 ```
 
