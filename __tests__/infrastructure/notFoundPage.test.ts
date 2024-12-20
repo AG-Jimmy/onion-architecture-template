@@ -1,9 +1,9 @@
 import express from "express";
 import supertest from "supertest";
-import notFound from "../routes/notFoundRouter";
+import notFound from "../../infrastructure/routes/notFoundRouter"
 import path from "path";
 import fs from "fs";
-import HttpStatus from "../Enums/httpStatus";
+import HttpStatus from "../../domain/enums/httpStatus"
 describe("notFound middleware", () => {
   it("should respond with HTML for HTML request", async () => {
     const app = express();

@@ -1,7 +1,7 @@
 import path from "path";
 import { Router } from "express";
 import { Request, Response } from "express-serve-static-core";
-import HttpStatus from "../Enums/httpStatus";
+import HttpStatus from "../../domain/enums/httpStatus";
 
 const notFound = Router();
 
